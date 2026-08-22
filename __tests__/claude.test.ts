@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { chatWithClaude } from '../lib/claude';
 
 describe('Claude Integration', () => {
