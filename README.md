@@ -1,46 +1,39 @@
-# Anthropic Showcase
-## Claude Integration Patterns
+# Anthropic Claude Showcase
 
-Production-ready Claude integration with safety-first architecture.
+**What this proves:** Claude API integration with explicit tool use, prompt
+caching, streaming responses, and typed output boundaries. Patterns reflect
+Anthropic's published best practices for reliable agent workflows.
 
-**Live:** https://anthropic-showcase.vercel.app
-
----
-
-## Features
-
-### Claude Integration
-- Multi-modal support (text + images)
-- Extended thinking (chain of thought)
-- Tool use and function calling
-- Streaming responses
-
-### Safety Patterns
-- Constitutional AI compliance
-- Harmlessness filtering
-- Content moderation
-- Audit logging
-
-### Performance
-- Prompt caching (90% cost reduction)
-- Batch processing
-- Rate limiting
-- Error handling
+**Portfolio:** [cyber-lazer-mermicorn](https://github.com/cyber-lazer-mermicorn) · Cherry Shanaley
 
 ---
 
-## Getting Started
+## Key patterns
+
+| Pattern | What it proves |
+|---|---|
+| Tool use | Typed tool definitions, safe invocation, result handling |
+| Prompt caching | Cache-control headers on large static context blocks |
+| Streaming | `stream()` with typed event handling, no dropped chunks |
+| Output typing | Zod-validated structured content blocks |
+| Multi-turn | Stateful conversation with explicit message history management |
+
+## Run locally
 
 ```bash
-git clone https://github.com/cyber-lazer-mermicorn/anthropic-showcase.git
-cd anthropic-showcase
 npm install
-cp .env.example .env.local
-npm run dev
+cp .env.example .env   # add ANTHROPIC_API_KEY
+npm run demo
+npm test
 ```
 
----
+## Evidence
 
-## Contact
+- Tool invocations produce structured, typed results — not just text
+- Prompt caching patterns include cache hit/miss logging
+- Streaming demo shows chunk-by-chunk output with error recovery
 
-**Cherry Shanaley (Chan)** — cyber.lazer.mermicorn@gmail.com
+## Honest scope
+
+Showcase-grade: Claude-specific patterns, correct and typed. No production
+authentication, multi-tenant isolation, or cost tracking included.
